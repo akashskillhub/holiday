@@ -7,10 +7,12 @@ const app = express()
 
 // middlewares
 app.use(express.json())
+app.use(express.static("dist"))
 app.use(express.static("uploads"))
 app.use(cookieParser())
 app.use(cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://holiday-ry4f.onrender.com",
     credentials: true
 }))
 // route
